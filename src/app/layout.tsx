@@ -22,7 +22,11 @@ export default function RootLayout({
       <body
         className={`${exo_2.variable} antialiased`}
       >
-        {children}
+      <div className="App">
+        <div className="App__body">
+          {children}
+        </div>
+      </div>
       </body>
     </html>
   );

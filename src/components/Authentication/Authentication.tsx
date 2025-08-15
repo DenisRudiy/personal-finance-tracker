@@ -1,8 +1,10 @@
+"use client"
 import React from 'react';
-import styles from './Authentification.module.scss';
+import styles from './Authentication.module.scss';
 import Image from 'next/image';
 
-const Authentification = () => {
+const Authentication = () => {
+
 	return (
 		<div className={styles.Authentification}>
 			<Image
@@ -16,7 +18,9 @@ const Authentification = () => {
 				<input type="text" className={styles.input} placeholder='E-Mail'/>
 				<input type="password" className={styles.input} placeholder='Password'/>
 				<div className={styles.Buttons}>
-					<button className={styles.button}>Login</button>
+    			<form method='POST' action='/api/onepass'>
+						<button className={styles.button} type="submit">Login</button>
+					</form>
 					<p className={styles.or}>or</p>
 					<div className={styles.buttonGoogle}>
 						<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50" className={styles.icon}>
@@ -30,4 +34,4 @@ const Authentification = () => {
 	);
 }
 
-export default Authentification;
+export default Authentication;

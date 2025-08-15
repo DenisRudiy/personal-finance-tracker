@@ -1,11 +1,5 @@
-import Authentification from "@/components/Authentification/Authentification";
+import Home from "@/components/Home/Home";
 
-export default function Home() {
-  return (
-    <div className="App">
-      <div className="App__body">
-        <Authentification></Authentification>
-      </div> 
-    </div>
-  );
+export default function HomePage() {
+  return <Home />;
 }
