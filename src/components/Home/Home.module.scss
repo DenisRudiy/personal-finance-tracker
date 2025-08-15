@@ -1,2 +1,120 @@
 .Home{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 12px;
+
+	.Navbar{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+		.NavbarData{
+			display: flex;
+			.Avatar{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				border: 2px solid #5298FB;
+			}
+			.UserData{
+				display: flex;
+				flex-direction: column;
+				margin-left: 10px;
+				color: #FFFFFF;
+
+				.p{
+					font-size: 13px;
+					font-weight: 600;
+					color: var(--grey);
+					margin: 0;
+				}
+				.h5{
+					font-size: 16px;
+					font-weight: 600;
+					text-transform: uppercase;
+				}
+			}
+		}
+		.Settings{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			cursor: pointer;
+			background-color: rgba($color: #1E3451, $alpha: .2);
+			.SettingBody{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 46px;
+				height: 46px;
+				border-radius: 50%;
+				background-color: rgba($color: #65A9FC, $alpha: .08);
+				border: 2px solid rgba($color: #4B97FC, $alpha: .03);
+				.SettingIcon{
+					box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+				}
+			}
+		}
+	}
+	.Balance{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		padding-top: 50px;
+		.BalanceButton{
+			cursor: pointer;
+			svg{
+				width: 32px;
+				height: 32px;
+			}
+		}
+		.BalanceData{
+			.BalanceMoney{
+				display: flex;
+				flex-direction: row;
+				align-items: start;
+				justify-content: center;
+				gap: 8px;
+
+				.BalanceCurrency{
+					font-size: 20px;
+					padding-top: 12px;
+					font-weight: 400;
+				}
+				.BalanceCount{
+					font-size: 50px;
+					font-weight: 600;
+				}
+			}
+			.BalanceStats{
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				padding-top: 8px;
+				.BalanceNet, .BalanceFlow{
+					display: flex;
+					gap: 2px;
+					p{
+						font-size: 12px;
+					}
+					.BalanceDynamicNet{
+						color: #5298FB;
+					}
+					.BalanceDynamicFlow{
+						color: #33A721;
+					}
+				}
+			}
+		}
+	}
 }

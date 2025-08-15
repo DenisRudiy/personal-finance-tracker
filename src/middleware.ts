@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const PUBLIC_PATHS = ["/login", "/api/onepass"];
+// const PUBLIC_PATHS = ["/login", "/api/onepass", '/']; // ! Development only
+const PUBLIC_PATHS = ["/login", "/api/onepass"]; // * Production
 function isPublicPath(pathname: string) {
   return PUBLIC_PATHS.some((p) => pathname.startsWith(p));
 }
